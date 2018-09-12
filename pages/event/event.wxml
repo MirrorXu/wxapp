@@ -1,0 +1,15 @@
+<!--pages/event/event.wxml-->
+<view class='page'>
+  <view class='demo1'>
+  <text>事件冒泡：</text>
+      <view  class="outer" data-flag="outer" bindtap='outerEvent'>
+        outer
+        <view class='center' data-flag="center">
+            center
+            <view class='inner'>inner</view>
+        </view>
+      </view>
+  </view>
+
+
+</view>

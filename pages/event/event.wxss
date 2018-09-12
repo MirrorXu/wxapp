@@ -1,0 +1,15 @@
+/* pages/event/event.wxss */
+
+.outer{
+  background: salmon;
+}
+.center{
+  background: seagreen;
+}
+.inner{
+  background: cornflowerblue;
+}
+
+.outer, .center,  .inner{
+  padding: 50rpx;
+} 

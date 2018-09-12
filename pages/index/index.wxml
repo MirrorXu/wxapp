@@ -10,4 +10,10 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <button bindtap='linkTo'>跳转到不存在的链接</button>
+  <navigator open-type='navigate' url='/pages/logs/logs?id=124&num=15&sss'>跳转到log 页面 ?id=124&num=15&sss</navigator>
+  <!-- <navigator open-type='reLaunch' url='/pages/logs/logs'>"重启页面" open-type="reLanuch"</navigator> -->
+  <navigator open-type='redirect' url='/pages/logs/logs'>"页面重定向" open-type="redirect"</navigator>
+
+  <button data-id="id111" data-info="xxxx" bindtap="onDataTap" >data-获取节点数据</button>
 </view>

@@ -1,6 +1,8 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function (o) {
+    console.log('【App.onLaunch】:', o)
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -18,7 +20,6 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: res => {
-       
         console.log( "wx.getSetting: success" , res )
         
         if (res.authSetting['scope.userInfo']) {
@@ -44,6 +45,19 @@ App({
       }
     })
   },
+  onShow(o){
+    console.log( '【App.onShow】:' , o )
+  },
+  onHide(o){
+    console.log('【App.onHide】:', o)
+  },
+
+  // onPageNotFound:function(info){
+  //   console.log( "App.pageNotFound:" , info );
+  //   wx.redirectTo({
+  //     url: '/pages/logs/logs',
+  //   })
+  // },
   globalData: {
     userInfo: null
   }

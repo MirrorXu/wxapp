@@ -15,10 +15,20 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  // 
+  linkTo(){
+    wx.navigateTo({
+      url: '/pages/xxx',
+    })
+  },
+  onDataTap( e ){
+      console.log(e)
+  },
   onLoad: function () {
-    console.log( 'App:' , app  )
-
-
+    var _this = this;
+    console.log( "【this.route是否能够获取到当前页面的路由？】："  , _this.route  )
+    console.log( '*******index页面通过getApp()获取小程序实例，App:' , app  )
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
